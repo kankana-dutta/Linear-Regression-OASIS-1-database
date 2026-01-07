@@ -15,6 +15,8 @@ d.ASF (atlas scaling factor)
 e.Handedness
 f.MMSE, CDR
 
+Task 1:
+
 **Initial Attempt: MMSE Prediction**
 
 1. MMSE contains many missing values
@@ -28,14 +30,17 @@ f.MMSE, CDR
 **Conclusion:**
 Global brain measures are insufficient to predict cognition using simple linear models.
 
+
+Task 2:
+
 **Modified Task: Predicting Brain Atrophy (nWBV)**
 Target:   nWBV
 Features: Age, eTIV, ASF, Hand
 
 **Methods**
-1.Median imputation + standardization
-2.One-hot encoding for handedness
-3.Linear Regression 
+1. Median imputation + standardization
+2. One-hot encoding for handedness
+3. Linear Regression 
 
 **Observations**
 a.Over 80% of variance in brain atrophy is explained
@@ -46,6 +51,6 @@ c.Ridge confirms model stability
 <img width="600" height="600" alt="Figure_1_volume" src="https://github.com/user-attachments/assets/5c615a79-90b5-4cb9-b98a-438a401f37ea" />
 
 **Conclusion**
-1.Linear regression works well when the target is biologically direct
-2.Brain structure is predictable from age and anatomy
-3.Cognitive scores require richer features and more complex models
+1. Linear regression works well when the target is biologically direct
+2. Brain structure is predictable from age and anatomy
+3. Cognitive scores require richer features and more complex models
